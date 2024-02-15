@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --gray-1-color: #2a2c30;
+  --gray-2-color: #37383c;
+  --gray-3-color: #7e7e7e;
+  --lightgray: #d3d3d3;
+  --dark-color: #202226;
+  --white-color: #ffffff;
+  --magenta-color: #c992d3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  width: 25em;
+  /* height: 500px; */
+  /* overflow: hidden; */
+  background: var(--dark-color);
+  border: solid 1px var(--gray-2-color);
+  border-radius: 8px;
+  color: var(--white-color);
+  font-size: 1em;
+  user-select: none;
+}
+
+.current-data {
+  padding: 1em;
+}
+
+.current-data:hover {
+  color: var(--lightgray);
+}
+
+.calendar {
+  background: var(--gray-1-color);
+  padding: 1em;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: 600;
+  padding-bottom: 1em;
+  align-items: center;
+  /* margin: 0 -20px; */
+}
+
+.header span {
+  grid-column: 1/4;
+}
+
+.header .buttons {
+  grid-column: 6/8;
+}
+
+.header .up-arrow {
+  grid-column: 6;
+}
+
+.header .down-arrow {
+  grid-column: 7;
+}
+
+.header .down-arrow,
+.header .up-arrow {
+  justify-self: end;
+  margin-right: -0.625em;
+}
+
+.header button {
+  font-size: 0.85em;
+  width: 2.1875em;
+  height: 2.1875em;
+  padding: 0.625em;
+  border-radius: 0.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header button:hover {
+  background: var(--gray-2-color);
+}
+
+.title-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 0 -1.25em;
+  margin-bottom: 1em;
+}
+
+.title-days {
+  text-align: center;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  margin: 0 -1.25em;
+}
+
+.days li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8125em;
+  height: 2.8125em;
+  padding: 0.625em;
+  border-radius: 50%;
+  color: var(--gray-3-color);
+}
+
+.days li:hover {
+  background: var(--gray-2-color);
+  color: var(--white-color);
+}
+
+.days .current-month {
+  color: var(--white-color);
+}
+
+.days .current-day {
+  background: var(--magenta-color);
+  color: var(--gray-1-color);
+}
+
+.days .current-day:hover {
+  background: var(--magenta-color);
+  color: var(--gray-1-color);
+}

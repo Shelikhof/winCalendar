@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Календарь</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="current-data" id="current-data">четверг, 9 ноября</header>
+      <div class="calendar">
+        <header class="header">
+          <span id="current-month">Ноябрь 2023</span>
+          <button class="up-arrow" id="prev-month">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #a4a4a6">
+              <path d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"></path>
+            </svg>
+          </button>
+          <button class="down-arrow" id="next-month">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #a4a4a6">
+              <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+            </svg>
+          </button>
+        </header>
+        <ul class="title-days">
+          <li>Пн</li>
+          <li>Вт</li>
+          <li>Ср</li>
+          <li>Чт</li>
+          <li>Пт</li>
+          <li>Сб</li>
+          <li>Вс</li>
+        </ul>
+        <ul class="days" id="days-container"></ul>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
